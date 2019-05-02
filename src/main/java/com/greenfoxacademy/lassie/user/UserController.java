@@ -1,7 +1,8 @@
 package com.greenfoxacademy.lassie.user;
 
+import com.greenfoxacademy.lassie.exception.ExistingUsernameException;
+import com.greenfoxacademy.lassie.exception.MissingParameterException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,8 +20,9 @@ public class UserController {
   }
 
   @PostMapping("/register")
-  public ResponseEntity registerUser(@RequestBody ApplicationUser applicationUser){
-    return new ResponseEntity<>(userService.registerNewUser(applicationUser), HttpStatus.ACCEPTED);
+  public ResponseEntity registerUser(@RequestBody ApplicationUser applicationUser)
+          throws MissingParameterException, ExistingUsernameException {
+    return userService.registerNewUser(applicationUser);
   }
 
   @GetMapping("/users")

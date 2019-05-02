@@ -6,7 +6,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -26,7 +28,7 @@ public class ApplicationUser {
   private long id;
   private String username;
   private String password;
-  @OneToMany
+  @OneToMany(mappedBy = "comment", fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
   private List<Comment> comments;
 
   public ApplicationUser(String username, String password){

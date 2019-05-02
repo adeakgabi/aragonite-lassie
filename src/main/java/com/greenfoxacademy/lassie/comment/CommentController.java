@@ -17,8 +17,8 @@ public class CommentController {
   }
   
   @PostMapping("/comment")
-  public ResponseEntity postComment(@RequestBody Comment comment){
-    Comment newComment = new Comment(comment.getMessage());
+  public ResponseEntity postComment(@RequestBody CommentDto commentDto){
+    Comment newComment = new Comment(commentDto.getMessage());
     commentService.saveComment(newComment);
     return ResponseEntity.ok("Comment is saved");
   }

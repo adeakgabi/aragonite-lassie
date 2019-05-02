@@ -1,4 +1,4 @@
-package com.greenfoxacademy.lassie.exceptions;
+package com.greenfoxacademy.lassie.exception;
 
 import com.greenfoxacademy.lassie.post.Post;
 

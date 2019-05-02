@@ -1,4 +1,4 @@
-package com.greenfoxacademy.lassie.demo.comment;
+package com.greenfoxacademy.lassie.comment;
 
 import lombok.Getter;
 import lombok.Setter;

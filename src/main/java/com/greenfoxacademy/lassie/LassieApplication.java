@@ -1,4 +1,4 @@
-package com.greenfoxacademy.lassie.demo;
+package com.greenfoxacademy.lassie;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @SpringBootApplication
-public class DemoApplication {
+public class LassieApplication {
 
   @Bean
   public BCryptPasswordEncoder bCryptPasswordEncoder() {
@@ -14,7 +14,7 @@ public class DemoApplication {
   }
 
   public static void main(String[] args) {
-    SpringApplication.run(DemoApplication.class, args);
+    SpringApplication.run(LassieApplication.class, args);
   }
 
 }

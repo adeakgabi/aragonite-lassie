@@ -1,4 +1,4 @@
-package com.greenfoxacademy.lassie.demo.user;
+package com.greenfoxacademy.lassie.user;
 
 import lombok.Getter;
 import lombok.Setter;

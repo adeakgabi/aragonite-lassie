@@ -10,6 +10,9 @@ import java.util.List;
 @Repository
 public interface PostRepository extends CrudRepository<Post, Long> {
 
-  @Query("SELECT p FROM Post p WHERE TYPE(p) = :postType")
-  List<Post> findAllByDtype(@Param("postType") String postType);
+  @Query("SELECT p FROM Post p WHERE TYPE(p) = 'Found'")
+  List<Post> findAllFoundTypePosts();
+
+  @Query("SELECT p FROM Post p WHERE TYPE(p) = 'Lost'")
+  List<Post> findAllLostTypePosts();
 }

@@ -28,7 +28,7 @@ public class ApplicationUser {
   private long id;
   private String username;
   private String password;
-  @OneToMany(mappedBy = "comment", fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
+  @OneToMany(mappedBy = "applicationUser", fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
   private List<Comment> comments;
 
   public ApplicationUser(String username, String password){

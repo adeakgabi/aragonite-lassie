@@ -4,6 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
 @Service
 public class UserServiceImpl implements UserService {
 
@@ -17,7 +21,13 @@ public class UserServiceImpl implements UserService {
   }
 
   public ApplicationUser registerNewUser(ApplicationUser user) {
+    user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
     userRepository.save(user);
     return user;
+  }
+
+  public List<ApplicationUser> getAllUser() {
+    List<ApplicationUser> users = new ArrayList<>(userRepository.findAll());
+    return users;
   }
 }

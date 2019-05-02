@@ -10,4 +10,8 @@ public class CommentServiceImpl implements CommentService {
   public CommentServiceImpl(CommentRepository commentRepository) {
     this.commentRepository = commentRepository;
   }
+  
+  public Comment saveComment(Comment comment){
+    return commentRepository.save(comment);
+  }
 }

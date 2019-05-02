@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.CascadeType;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -16,10 +17,13 @@ import javax.persistence.OneToMany;
 import java.util.ArrayList;
 import java.util.List;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
 @Entity
 public class ApplicationUser {
 
@@ -31,7 +35,7 @@ public class ApplicationUser {
   @OneToMany(mappedBy = "applicationUser", fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
   private List<Comment> comments;
 
-  public ApplicationUser(String username, String password){
+  public ApplicationUser(String username, String password) {
     this.username = username;
     this.password = password;
     this.comments = new ArrayList<>();

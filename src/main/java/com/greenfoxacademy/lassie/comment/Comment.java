@@ -3,7 +3,6 @@ package com.greenfoxacademy.lassie.comment;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.greenfoxacademy.lassie.post.Post;
 import com.greenfoxacademy.lassie.user.ApplicationUser;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -31,16 +30,16 @@ public class Comment {
   private Post post;
   
   
-  public Comment(String message){
+  public Comment(String message) {
     this.message = message;
   }
   
-  public void setApplicationUser(ApplicationUser applicationUser){
+  public void setApplicationUser(ApplicationUser applicationUser) {
     this.applicationUser = applicationUser;
     applicationUser.addComment(this);
   }
   
-  public void setPost(Post post){
+  public void setPost(Post post) {
     this.post = post;
     post.addComment(this);
   }

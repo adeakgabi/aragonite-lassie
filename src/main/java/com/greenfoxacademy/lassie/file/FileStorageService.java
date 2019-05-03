@@ -3,7 +3,6 @@ package com.greenfoxacademy.lassie.file;
 import com.greenfoxacademy.lassie.configuration.FileStorageProperties;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;

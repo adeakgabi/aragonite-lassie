@@ -19,7 +19,6 @@ import java.util.ArrayList;
 import java.util.Date;
 
 import static com.auth0.jwt.algorithms.Algorithm.HMAC512;
-
 import static com.greenfoxacademy.lassie.security.SecurityConstants.EXPIRATION_TIME;
 import static com.greenfoxacademy.lassie.security.SecurityConstants.HEADER_STRING;
 import static com.greenfoxacademy.lassie.security.SecurityConstants.SECRET;

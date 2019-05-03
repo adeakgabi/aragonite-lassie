@@ -16,5 +16,4 @@ public class LassieApplication {
   public static void main(String[] args) {
     SpringApplication.run(LassieApplication.class, args);
   }
-
 }

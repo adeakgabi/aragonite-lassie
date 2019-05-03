@@ -15,4 +15,6 @@ public interface PostRepository extends CrudRepository<Post, Long> {
 
   @Query("SELECT p FROM Post p WHERE TYPE(p) = 'Lost'")
   List<Post> findAllLostTypePosts();
+  
+  Post findById(long id);
 }

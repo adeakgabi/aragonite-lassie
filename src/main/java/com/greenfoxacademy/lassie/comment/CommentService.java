@@ -6,5 +6,5 @@ public interface CommentService {
   
   Comment saveComment(Comment comment);
   
-  Comment postComment(CommentDto commentDto, Authentication auth);
+  Comment postComment(CommentDto commentDto, Authentication auth, long id);
 }
